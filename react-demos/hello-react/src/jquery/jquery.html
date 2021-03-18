@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <!-- <script type="text/javascript">
+        function clickMe(){
+            alert('Button is clicked..');
+            const _val = document.getElementById('txtUser').value;
+            alert('Username... '+_val);
+        }
+        </script> -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+        console.log('jquery ready function....');
+        // click event
+
+        // choose a selector via one of these
+
+        // css by id
+        // #btn_click
+        // css by class
+        // .btn
+
+        jQuery('#btn_click').click(function(){
+            const _val = $('#txtUser').val();
+            //$('#main-content').html(`<h3>${_val}</h3>`);
+            // access all span elements with same class
+            $('span.spn').html('<h4>Found u ...</h4>');
+            $('span.spn').addClass('new-spn'); // add css class
+            $('span.spn').attr('style','display:block');
+
+            // access inner child
+            //$('.no-spn').find('span').addClass('inner-child');
+        
+            $('.no-spn').css('border','1px solid');
+        
+            //alert('Username... '+_val);
+        });
+
+        // form submission
+        $('#frm').submit(function(event){
+            console.log('form has been submitted');
+
+            console.log(event.target);
+
+            // validate the form fields
+            //.... START
+            const username = $('#txtUser').val();
+            const job = $('#txtJob').val();
+            if(username === '' || username === undefined){
+                $('#txtUser').css('border','1px solid red');
+                //
+                $('.error').css('color','red');
+                $('.error').text("can't be blank");
+                event.preventDefault();
+            }
+            if(job === '' || job === undefined){
+                $('#txtJob').css('border','1px solid red');
+                //
+                $('.error').css('color','red');
+                $('.error').text("can't be blank");
+                event.preventDefault();
+            }
+            //.... END
+
+
+            // call rest api for save
+            // const _url = 'https://reqres.in/api/users';
+            // fetch(_url,{
+            //     method: 'POST',
+            //     body: JSON.stringify({
+            //         name : $('#txtUser').val(),
+            //         job : $('#txtJob').val()
+            //     })
+            // })
+            // .then(res=>res.json())
+            // .then(res=> console.log(res))
+            // .catch(err=>{
+            //     console.error(err);
+            //     alert('Error Found');
+            // });
+            // event.preventDefault();
+        });
+        $('#txtUser').change(function(){
+            $('#txtUser').css('border','none');
+            $('.error').text('');
+        });
+        $('#txtJob').change(function(){
+            $('#txtJob').css('border','none');
+            $('.error').text('');
+        });
+    });
+
+    </script>
+    <style type="type/css">
+    .spn{
+        border: 1px solid;
+        border-color: aqua;
+    }
+    .no-spn{
+        border: 1px solid;
+        border-color: rebeccapurple;
+    }
+
+    .new-spn{
+        /* color: salmon; */
+        background-color: seashell;
+    }
+    .inner-child{
+        background-color: sienna;
+        border: 1px dotted blue;
+    }
+
+    </style>
+    </head>
+<body>
+    <form id="frm">
+        <div>
+            Username*: <input type="text" id="txtUser" name="txtUser" /><span class="error"></span>
+        </div>
+        <div>
+            Job*: <input type="text" id="txtJob" name="txtJob" /><span class="error"></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit!" />
+        </div>
+    </form>
+    <div id="main-content">
+
+    </div>
+    <span class="spn">
+        
+    </span>
+    <span class="spn">
+
+    </span>
+    <span class="no-spn">
+        <span>inner</span>
+        <div>
+            <span>nested</span>
+        </div>
+    </span>
+    <div>
+        <input type="button" id="btn_click" class="btn" value="Click Me!"/>
+    </div>
+</body>
+    </html>
