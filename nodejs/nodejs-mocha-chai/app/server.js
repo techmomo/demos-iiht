@@ -4,10 +4,12 @@ const calc = require('./calc');
 
 const PORT = 6701;
 
+const statusAPI = (request,response)=>{
+    res.status(200).json({ message : 'Server is up'});
+}
+
 // get api
-server.get('/status',(req,res)=>{
-    res.status(200).json({message: "Server is up"});
-});
+server.get('/status',statusAPI(request,response));
 
 // perform addition using calc
 server.get('/calc/add/:num1/:num2',(req,res)=>{
@@ -18,7 +20,7 @@ server.get('/calc/add/:num1/:num2',(req,res)=>{
     res.json({
         result : _sum
     });
-    
+
 });
 // 
 server.listen(PORT,()=>{
