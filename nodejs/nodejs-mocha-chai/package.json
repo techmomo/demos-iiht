@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node calc.js",
-    "test": "npx mocha --reporter spec"
+    "test": "npx mocha --reporter spec",
+    "coverage": "nyc mocha --reporters",
+    "custom-coverage": "nyc mocha ./test/user.spec.js "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.4",
+    "express": "^4.17.1",
     "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
     "request": "^2.88.2"
   }
 }
