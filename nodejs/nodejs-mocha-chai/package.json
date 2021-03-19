@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-mocha-chai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node calc.js",
+    "test": "npx mocha --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "request": "^2.88.2"
+  }
+}
