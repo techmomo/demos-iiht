@@ -1,0 +1,20 @@
+{
+  "name": "user-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test",
+    "start": "node index.js",
+    "restart": "nodemon index.js"
+  },
+  "author": "Mohsin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
