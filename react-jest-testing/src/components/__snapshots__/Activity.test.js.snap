@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Href changes the style on hover  1`] = `
+<a
+  className="normal"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`Href changes the style on hover  2`] = `
+<a
+  className="hover"
+  href="#"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`should have href value and css class as hover  1`] = `
+<a
+  className="normal"
+  href="http://localhost"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`should have href value and css class as hover  2`] = `
+<a
+  className="hover"
+  href="http://localhost"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
+
+exports[`should have href value and css class as hover  3`] = `
+<a
+  className="normal"
+  href="http://localhost"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+/>
+`;
