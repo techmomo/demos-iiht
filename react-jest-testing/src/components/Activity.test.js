@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer'
 
 // snapshot testing
-test('Href changes the style on hover ',()=>{
+test('Href changes the style on hover',()=>{
     //const component = render(<Activity></Activity>);
     const component = renderer.create(<Activity></Activity>);
 
@@ -16,10 +16,9 @@ test('Href changes the style on hover ',()=>{
     // re-rendering
     _elements = component.toJSON();
     expect(_elements).toMatchSnapshot();
-
 });
 
-test('should have href value and css class as hover ',()=>{
+test('should have href value and css class as hover',()=>{
     const component = renderer.create(<Activity url="http://localhost"></Activity>);
 
     let _elements = component.toJSON();
@@ -35,6 +34,5 @@ test('should have href value and css class as hover ',()=>{
     _elements.props.onMouseLeave();
     // re-rendering
     _elements = component.toJSON();
-    expect(_elements).toMatchSnapshot();
-    
+    expect(_elements).toMatchSnapshot(); 
 });

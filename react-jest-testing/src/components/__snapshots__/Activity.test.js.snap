@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Href changes the style on hover  1`] = `
+exports[`Href changes the style on hover 1`] = `
 <a
   className="normal"
   href="#"
@@ -9,7 +9,7 @@ exports[`Href changes the style on hover  1`] = `
 />
 `;
 
-exports[`Href changes the style on hover  2`] = `
+exports[`Href changes the style on hover 2`] = `
 <a
   className="hover"
   href="#"
@@ -18,7 +18,7 @@ exports[`Href changes the style on hover  2`] = `
 />
 `;
 
-exports[`should have href value and css class as hover  1`] = `
+exports[`should have href value and css class as hover 1`] = `
 <a
   className="normal"
   href="http://localhost"
@@ -27,7 +27,7 @@ exports[`should have href value and css class as hover  1`] = `
 />
 `;
 
-exports[`should have href value and css class as hover  2`] = `
+exports[`should have href value and css class as hover 2`] = `
 <a
   className="hover"
   href="http://localhost"
@@ -36,7 +36,7 @@ exports[`should have href value and css class as hover  2`] = `
 />
 `;
 
-exports[`should have href value and css class as hover  3`] = `
+exports[`should have href value and css class as hover 3`] = `
 <a
   className="normal"
   href="http://localhost"
