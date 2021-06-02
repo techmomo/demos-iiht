@@ -1,11 +1,9 @@
 import React from 'react';
 import Activity from './Activity';
-import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer'
 
 // snapshot testing
-test('Href changes the style on hover',()=>{
-    //const component = render(<Activity></Activity>);
+it('Href changes the style on hover',()=>{
     const component = renderer.create(<Activity></Activity>);
 
     let _elements = component.toJSON();
@@ -18,7 +16,7 @@ test('Href changes the style on hover',()=>{
     expect(_elements).toMatchSnapshot();
 });
 
-test('should have href value and css class as hover',()=>{
+it('should have href value and css class as hover',()=>{
     const component = renderer.create(<Activity url="http://localhost"></Activity>);
 
     let _elements = component.toJSON();
