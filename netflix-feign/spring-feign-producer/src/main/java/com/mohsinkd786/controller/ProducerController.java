@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/health")
-public class HealthController {
+@RequestMapping("/producer")
+public class ProducerController {
 
-    @GetMapping("/")
-    public String healthCheck(){
-        return "Health Check - PORT 8088 ";
+    @GetMapping
+    public String healthCheck() {
+        return "Feign Producer is working fine ";
     }
 }
